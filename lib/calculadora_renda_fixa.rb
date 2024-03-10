@@ -2,7 +2,7 @@
 
 require_relative "calculadora_renda_fixa/version"
 
-module calculadora_renda_fixa
+module CalculadoraRendaFixa
   class Error < StandardError; end
   # Your code goes here...
 end

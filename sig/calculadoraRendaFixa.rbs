@@ -1,4 +1,4 @@
-module calculadora_renda_fixa
+module CalculadoraRendaFixa
   VERSION: String
   # See the writing guide of rbs: https://github.com/ruby/rbs#guides
 end
