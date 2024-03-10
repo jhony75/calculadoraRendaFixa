@@ -4,7 +4,7 @@ require_relative "lib/calculadora_renda_fixa/version"
 
 Gem::Specification.new do |spec|
   spec.name = "calculadora_renda_fixa"
-  spec.version = calculadora_renda_fixa::VERSION
+  spec.version = CalculadoraRendaFixa::VERSION
   spec.authors = ["jhony75"]
   spec.email = ["jonatas.lima.medeiros@live.com"]
 
