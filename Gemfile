@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in calculadoraRendaFixa.gemspec
+# Specify your gem's dependencies in calculadora_renda_fixa.gemspec
 gemspec
 
 gem "rake", "~> 13.0"

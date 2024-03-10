@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "calculadoraRendaFixa"
+require "calculadora_renda_fixa"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

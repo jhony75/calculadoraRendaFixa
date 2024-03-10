@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe CalculadoraRendaFixa do
+RSpec.describe calculadora_renda_fixa do
   it "has a version number" do
-    expect(CalculadoraRendaFixa::VERSION).not_to be nil
+    expect(calculadora_renda_fixa::VERSION).not_to be nil
   end
 end
