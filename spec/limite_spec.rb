@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "../lib/limite"
+require_relative "../lib/limite/limite"
 
 RSpec.describe LHopitalCalculator::LimitCalculator do
   # Create an instance of the LimitCalculator for testing

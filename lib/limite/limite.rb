@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "limite/version"
+require_relative "./version"
 
 # Create a module for your project
 module LHopitalCalculator
