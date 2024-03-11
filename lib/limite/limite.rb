@@ -50,7 +50,7 @@ module LHopitalCalculator
 end
 
 # Example usage
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
   # Define your functions for f(point) and g(point)
   function_f = ->(point) { point**2 + 1 }
   function_g = ->(point) { point - 1 }
