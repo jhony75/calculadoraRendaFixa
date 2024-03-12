@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
+require "date"
+
 module TaxaEfetivaAnual
   # Calcula taxa efetiva anual de diferentes maneiras
   class TaxaEfetivaAnual
-    # Prefixado - Cálculo da Taxa Efetiva Anual a partir do PU.
-    # Taxa = ([VN/PU]^252/du - 1) * 100
-    # Taxa = ([Valor Nominal do Título/Preço Unitário do Título]^252/dias uteis - 1) * 100
     def initialize(valor_nominal, preco_unitario, dias_uteis)
       @valor_nominal = valor_nominal.to_f
       @preco_unitario = preco_unitario.to_f
@@ -30,10 +29,17 @@ module TaxaEfetivaAnual
       taxa.round(2)
     end
   end
+
+  # Calcula o preço unitário de um título, dado Valor Nominal, Taxa e Dias Uteis
+  class PrecoUnitario
+    def calcular_pu(valor_nominal, taxa, dias_uteis)
+      fator_desconto = (taxa / 100.0 + 1.0)**(dias_uteis.to_f / 252.0)
+      pu = valor_nominal / fator_desconto
+      pu.round(2)
+    end
+  end
 end
 
-# taxa_calculator = TaxaEfetivaAnual::TaxaEfetivaAnual.new(1000, 883, 252)
-# tax = TaxaEfetivaAnual::TaxaEfetivaAnual.new(1000, 800, 500)
+calculadora = TaxaEfetivaAnual::PrecoUnitario.new
 
-# taxa_calculator.calcular_taxa_efetiva_anual_por_preco_unitario
-# tax.calcular_taxa_efetiva_anual_por_preco_unitario
+puts calculadora.calcular_pu(1000.0, 15.0, 440.0)
